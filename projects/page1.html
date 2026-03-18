@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects - adriennepaigedesign</title>
+
+  <link rel="icon" type="image/png" href="../favicon.png">
+
+  <link rel="stylesheet" href="../main.css">
+  <link rel="stylesheet" href="projects.css">
+</head>
+
+<body>
+<div id="top"></div>
+  <header class="site-header">
+    <div class="logo-wrap">
+      <a href="../index.html" class="logo">
+        <img src="../my-logo.png" alt="Adrienne Paige Design">
+      </a>
+    </div>
+
+    <nav class="site-nav">
+      <a href="page1.html">projects</a>
+      <a href="../websites/page2.html" class="active">websites</a>
+      <a href="../about/about.html">about</a>
+      <a href="../contact/contact.html">contact</a>
+    </nav>
+
+    <button class="menu-toggle" aria-label="Open menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </header>
+
+  <div class="mobile-menu">
+    <a href="page1.html">projects</a>
+    <a href="../websites/page2.html">websites</a>
+    <a href="../about/about.html">about</a>
+    <a href="../contact/contact.html">contact</a>
+  </div>
+
+  <main class="projects-page">
+    <section class="projects-hero">
+      <p class="projects-eyebrow">Selected Work</p>
+      <h1>Projects</h1>
+      <p class="projects-intro">
+        A collection of editorial, branding, motion, and experimental design work.
+      </p>
+    </section>
+
+
+  <section class="masonry-grid">
+   
+    <a class="masonry-card" href="project1/project1.html">
+      <img src="project1/images/Mario-Cover.jpg" alt="Super Mario Zine cover">
+    <div class="masonry-overlay">
+        <div class="masonry-text">
+        <span class="project-title">Super Mario Zine
+        </span>
+        <span class="project-date">2024</span>
+        </div>
+    </div>
+    </a>
+
+    <a class="masonry-card" href="project3/project3.html">
+      <img src="project3/images/weeknd-publication.jpg" alt="The Weeknd Group Publication cover">
+      <div class="masonry-overlay">
+        <div class="masonry-text">
+        <span class="project-title">The Weeknd Group Publication
+        </span>
+        <span class="project-date">2025</span>
+        </div>
+    </div>
+        </div>
+    </a>    
+
+    <a class="masonry-card" href="project2/project2.html">
+      <img src="project2/images/processbook.jpg" alt="Markmaking Process Book cover">
+      <div class="masonry-overlay">
+        <div class="masonry-text">
+        <span class="project-title">Markmaking Process Book
+        </span>
+        <span class="project-date">2025</span>
+        </div>
+    </div>
+        </div>
+    </a>
+
+    <a class="masonry-card" href="project7/project7.html">
+      <img src="project7/images/tpb-cover-image.jpg" alt="The Pregnant B*tch">
+      <div class="masonry-overlay">
+        <div class="masonry-text">
+        <span class="project-title">The Pregnant B*tch
+        </span>
+        <span class="project-date">2025</span>
+        </div>
+    </div>
+        </div>
+    </a>
+
+    <a class="masonry-card" href="project6/project6.html">
+      <img src="project6/images/500pgbookcover.jpg" alt="500 page book">
+      <div class="masonry-overlay">
+        <div class="masonry-text">
+        <span class="project-title">Polly Pocket Archive
+        </span>
+        <span class="project-date">2025</span>
+        </div>
+    </div>
+        </div>
+    </a>
+
+    <a class="masonry-card" href="project4/project4.html">
+      <img src="project4/images/type-specimen-cover.jpg" alt="Type Specimen Posters">
+      <div class="masonry-overlay">
+        <div class="masonry-text">
+        <span class="project-title">Type Specimen Poster
+        </span>
+        <span class="project-date">2024</span>
+        </div>
+    </div>
+        </div>
+    </a>
+
+    <a class="masonry-card" href="project5/project5.html">
+      <img src="project5/titlecards.jpg" alt="Music Video Title Cards">
+     <div class="masonry-overlay">
+        <div class="masonry-text">
+        <span class="project-title">Music Video Title Cards
+        </span>
+        <span class="project-date">2024</span>
+        </div>
+    </div>
+    </a>
+
+  </section>
+</main>
+
+<footer class="site-footer">
+
+  <div class="footer-container">
+
+    <div class="footer-brand">
+      <p class="footer-name">Adrienne Paige Design</p>
+      <p class="footer-credit">✦ hand coded by Adrienne Badgett-Campo ✦</p>
+    </div>
+
+    <div class="footer-links">
+      <h4>Explore</h4>
+      <a href="page1.html">Projects</a>
+      <a href="../websites/page2.html">Websites</a>
+      <a href="../about/about.html">About</a>
+      <a href="../contact/contact.html">Contact</a>
+    </div>
+
+    <div class="footer-social">
+      <h4>Connect</h4>
+      <a href="https://instagram.com/adriennepaigedesign" target="_blank">Instagram</a>
+      <a href="mailto:adriennepaigedesign@gmail.com">Email</a>
+    </div>
+    <div class="footer-top">
+    <a href="#top">Back to top ↑</a>
+    </div>
+  </div>
+
+</footer>
+
+  <script>
+    const menuButton = document.querySelector(".menu-toggle");
+    const mobileMenu = document.querySelector(".mobile-menu");
+
+    if (menuButton && mobileMenu) {
+      menuButton.addEventListener("click", () => {
+        menuButton.classList.toggle("open");
+        mobileMenu.classList.toggle("open");
+      });
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,96 @@
+.websites-page {
+  width: min(1100px, calc(100% - 64px));
+  margin: 0 auto;
+  padding-top: 160px;
+  padding-bottom: 80px;
+}
+
+/* intro */
+.websites-intro {
+  margin-bottom: 100px;
+  text-align: center;
+}
+
+.websites-intro h1 {
+  font-family: "The Seasons", serif;
+  font-size: clamp(36px, 5vw, 60px);
+  margin-bottom: 20px;
+}
+
+.websites-intro p {
+  font-family: "Shree Devanagari 714", serif;
+  font-size: 20px;
+  color: #666;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* grid */
+.websites-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+}
+
+/* card */
+.website-card {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.website-image {
+  overflow: hidden;
+  margin-bottom: 16px;
+}
+
+.website-image img {
+  width: 100%;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.website-card:hover .website-image img {
+  transform: scale(1.04);
+}
+
+/* text */
+.website-info h2 {
+  font-family: "The Seasons", serif;
+  font-size: 24px;
+  margin: 0 0 8px;
+}
+
+.website-info p {
+  font-family: "Shree Devanagari 714", serif;
+  font-size: 18px;
+  color: #666;
+  margin: 0 0 10px;
+}
+
+.website-meta {
+  font-family: "Shree Devanagari 714", serif;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #999;
+  display: flex;
+  gap: 12px;
+}
+
+/* responsive */
+@media (max-width: 700px) {
+  .websites-page {
+    width: calc(100% - 32px);
+    padding-top: 120px;
+  }
+
+  .websites-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .websites-intro p {
+    font-size: 18px;
+  }
+}

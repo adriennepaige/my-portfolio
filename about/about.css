@@ -1,0 +1,625 @@
+body.about-page {
+  background:
+    radial-gradient(circle at top left, rgba(255,255,255,0.45), transparent 30%),
+    radial-gradient(circle at bottom right, rgba(210, 186, 255, 0.35), transparent 35%),
+    #e8dcff;
+  color: #2d2340;
+  overflow-x: hidden;
+}
+
+.about-page .site-header {
+  background: rgba(232, 220, 255, 0.92);
+  backdrop-filter: blur(10px);
+}
+
+.about-main {
+  width: min(1120px, calc(100% - 64px));
+  margin: 0 auto;
+  padding-top: 150px;
+  padding-bottom: 90px;
+  position: relative;
+}
+
+.eyebrow {
+  margin: 0 0 12px;
+  font-family: "Shree Devanagari 714", serif;
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #7b63a8;
+}
+
+.about-hero {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 60px;
+  align-items: center;
+  margin-bottom: 90px;
+}
+
+.about-hero h1 {
+  margin: 0 0 20px;
+  font-family: "The Seasons", serif;
+  font-size: clamp(42px, 7vw, 78px);
+  line-height: 0.95;
+  color: #24183a;
+}
+
+.about-intro {
+  font-family: "Shree Devanagari 714", serif;
+  font-size: 20px;
+  line-height: 1.5;
+  color: #4f4269;
+  margin: 0 0 18px;
+  max-width: 650px;
+}
+
+.about-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.about-tags span {
+  display: inline-block;
+  padding: 10px 16px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.62);
+  border: 1px solid rgba(123, 99, 168, 0.18);
+  font-family: "Shree Devanagari 714", serif;
+  font-size: 13px;
+  letter-spacing: 0.06em;
+  color: #5d4c82;
+  box-shadow: 0 8px 22px rgba(105, 77, 156, 0.08);
+}
+
+.about-hero-media {
+  position: relative;
+  min-height: 500px;
+}
+
+.about-photo-card,
+.about-sticker-card,
+.about-card,
+.currently-card,
+.about-cta {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+.about-photo-card {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 250px;
+  padding: 16px 16px 18px;
+  background: rgba(255, 255, 255, 0.88);
+  border-radius: 22px;
+  box-shadow: 0 18px 45px rgba(111, 84, 163, 0.16);
+  transform: rotate(-5deg);
+}
+
+.photo-frame {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  background: linear-gradient(135deg, #d7c1ff, #f3ebff);
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.photo-placeholder {
+  width: 34%;
+  opacity: 0.85;
+}
+
+.photo-caption {
+  margin: 14px 4px 0;
+  font-family: "Shree Devanagari 714", serif;
+  font-size: 14px;
+  line-height: 1.4;
+  color: #5a4a7d;
+}
+
+.photo-tape {
+  position: absolute;
+  width: 72px;
+  height: 20px;
+  background: rgba(255,255,255,0.5);
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(120, 96, 169, 0.12);
+}
+
+.tape-one {
+  top: 0px;
+  left: -10px;
+  transform: rotate(-25deg);
+}
+
+.tape-two {
+  top: -8px;
+  right: 10px;
+  transform: rotate(15deg);
+}
+
+.spin-sticker-card {
+  position: absolute;
+  right: 32px;
+  bottom: 42px;
+
+  width: 240px;
+  height: 50px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: white;
+  border-radius: 60px;
+
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.spin-sticker-card:hover {
+  box-shadow: 0 18px 36px rgba(0, 0, 0, 0.14);
+  transform: translateY(-4px);
+}
+
+.spin-sticker-card.spinning {
+  animation: spinSticker 0.9s ease-in-out;
+}
+
+.spin-sticker {
+  width: 70%;
+  max-width: 200px;
+  display: block;
+  pointer-events: none;
+}
+
+.spin-sticker-card.spinning {
+  animation: spinSticker 0.9s ease-in-out;
+}
+
+@keyframes spinSticker {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  100% {
+    transform: rotate(360deg) scale(1.04);
+  }
+}
+
+.sparkle-deco {
+  position: absolute;
+  width: 60px;
+  pointer-events: none;
+  opacity: 0.88;
+}
+
+.sparkle-one {
+  top: -10px;
+  right: 5px;
+  animation: floaty 3s ease-in-out infinite;
+}
+
+.sparkle-two {
+  bottom: 5px;
+  left: 210px;
+  width: 42px;
+  animation: floaty 3.8s ease-in-out infinite;
+}
+
+.about-collage {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 24px;
+  margin-bottom: 90px;
+  align-items: start;
+}
+
+.about-card {
+  background: rgba(255, 255, 255, 0.56);
+  border: 1px solid rgba(123, 99, 168, 0.14);
+  border-radius: 28px;
+  padding: 30px;
+  box-shadow: 0 15px 35px rgba(111, 84, 163, 0.08);
+}
+
+.about-card-large {
+  grid-row: span 2;
+  min-height: 100%;
+}
+
+.about-card:nth-child(2) {
+  transform: rotate(1.4deg);
+}
+
+.about-card:nth-child(3) {
+  transform: rotate(-1.2deg);
+}
+
+.about-card:nth-child(4) {
+  transform: rotate(1deg);
+}
+
+.about-card h2 {
+  margin: 0 0 14px;
+  font-family: "The Seasons", serif;
+  font-size: 30px;
+  color: #2e2048;
+}
+
+.about-card p {
+  margin: 0;
+  font-family: "Shree Devanagari 714", serif;
+  font-size: 18px;
+  line-height: 1.5;
+  color: #51446c;
+}
+
+.currently-section {
+  margin-bottom: 90px;
+}
+
+.currently-intro h2 {
+  margin: 0 0 22px;
+  font-family: "The Seasons", serif;
+  font-size: clamp(30px, 4vw, 48px);
+  color: #291c43;
+}
+
+.currently-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+  margin-top: 20px;
+}
+
+.currently-card {
+  padding: 24px;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.55);
+  border: 1px solid rgba(123, 99, 168, 0.14);
+  box-shadow: 0 14px 32px rgba(111, 84, 163, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+}
+
+.currently-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 26px rgba(111, 84, 163, 0.12);
+}
+
+.currently-label {
+  display: inline-block;
+  margin-bottom: 12px;
+
+  font-family: "Shree Devanagari 714", serif;
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+
+  color: #7b63a8;
+
+  opacity: 0.9;
+}
+
+.currently-card p {
+  margin: 0;
+  font-family: "Shree Devanagari 714", serif;
+  font-size: 18px;
+  line-height: 1.5;
+  color: #51446c;
+}
+
+.music-visual-card {
+  cursor: pointer;
+}
+
+.music-visual {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-top: 6px;
+  margin-bottom: 18px;
+}
+
+.vinyl {
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  background: radial-gradient(circle at center, #d6c2ff 8%, #2b2142 15%, #252525 58%, #000 100%);
+  position: relative;
+  flex-shrink: 0;
+  animation: spinVinyl 6s linear infinite;
+  box-shadow: 0 8px 20px rgba(70, 50, 110, 0.18);
+}
+
+.vinyl::after {
+  content: "";
+  position: absolute;
+  inset: 50%;
+  width: 12px;
+  height: 12px;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: #f3ecff;
+}
+
+.music-visual-card:hover .vinyl {
+  animation-duration: 2.8s;
+}
+
+.music-info {
+  min-width: 0;
+  transition: opacity 0.25s ease;
+}
+
+.music-info.fade {
+  opacity: 0;
+}
+
+.song-title {
+  margin: 6px 0 2px;
+  font-family: "The Seasons", serif;
+  font-size: 24px;
+  line-height: 1.1;
+  color: #2e2048;
+}
+
+.song-artist {
+  margin: 0 0 2px;
+  font-family: "Shree Devanagari 714", serif;
+  font-size: 15px;
+  color: #6a5a8f;
+}
+
+.song-note {
+  margin: 0;
+  font-family: "Shree Devanagari 714", serif;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #8b74b5;
+}
+
+.spotify-wrap {
+  margin-top: 2px;
+}
+
+.spotify-wrap.fade iframe {
+  opacity: 0;
+}
+
+.spotify-wrap iframe {
+  transition: opacity 0.25s ease;
+}
+
+@keyframes spinVinyl {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.about-fun {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 34px;
+  align-items: start;
+  margin-bottom: 90px;
+  padding: 38px;
+  border-radius: 32px;
+  background: rgba(255, 255, 255, 0.42);
+  border: 1px solid rgba(123, 99, 168, 0.14);
+  box-shadow: 0 18px 42px rgba(111, 84, 163, 0.09);
+}
+
+.about-fun h2 {
+  margin: 0 0 16px;
+  font-family: "The Seasons", serif;
+  font-size: clamp(28px, 4vw, 42px);
+  line-height: 1.05;
+  color: #2a1d42;
+}
+
+.about-fun p {
+  margin: 0;
+  font-family: "Shree Devanagari 714", serif;
+  font-size: 19px;
+  line-height: 1.5;
+  color: #51446c;
+}
+
+.fun-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.mini-pill {
+  padding: 16px 18px;
+  border-radius: 18px;
+  background: rgba(245, 240, 255, 0.95);
+  border: 1px solid rgba(123, 99, 168, 0.12);
+  font-family: "Shree Devanagari 714", serif;
+  font-size: 16px;
+  color: #5c4c7f;
+  transition: transform 0.25s ease;
+}
+
+.mini-pill:hover {
+  transform: translateX(6px);
+}
+
+.about-cta {
+  text-align: center;
+  padding: 56px 28px;
+  border-radius: 32px;
+  background: rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(123, 99, 168, 0.14);
+  box-shadow: 0 16px 38px rgba(111, 84, 163, 0.08);
+}
+
+.about-cta h2 {
+  margin: 0 0 14px;
+  font-family: "The Seasons", serif;
+  font-size: clamp(30px, 4vw, 44px);
+  color: #291c43;
+}
+
+.about-cta p {
+  max-width: 650px;
+  margin: 0 auto 24px;
+  font-family: "Shree Devanagari 714", serif;
+  font-size: 19px;
+  line-height: 1.5;
+  color: #51446c;
+}
+
+.about-button {
+  display: inline-block;
+  padding: 14px 24px;
+  border-radius: 999px;
+  background: #7f63bb;
+  color: #fff;
+  text-decoration: none;
+  font-family: "Shree Devanagari 714", serif;
+  font-size: 15px;
+  letter-spacing: 0.04em;
+  transition: transform 0.25s ease, background 0.25s ease;
+}
+
+.about-button:hover {
+  background: #6d52ab;
+  transform: translateY(-2px);
+}
+
+.about-footer {
+  background: transparent;
+}
+
+.trail-sparkle {
+  position: fixed;
+  width: 14px;
+  height: 14px;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  background-image: url("../sparkle.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  animation: sparkle-fade 0.7s ease forwards;
+}
+
+@keyframes sparkle-fade {
+  0% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.4) rotate(25deg);
+  }
+}
+
+@keyframes floaty {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(6deg);
+  }
+}
+
+@media (max-width: 900px) {
+  .about-main {
+    width: calc(100% - 32px);
+    padding-top: 120px;
+    padding-bottom: 60px;
+  }
+
+  .about-hero,
+  .about-collage,
+  .currently-grid,
+  .about-fun {
+    grid-template-columns: 1fr;
+  }
+
+  .about-hero {
+    gap: 34px;
+    margin-bottom: 70px;
+  }
+
+  .about-hero-text {
+    text-align: center;
+  }
+
+  .about-intro {
+    font-size: 18px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .about-tags {
+    justify-content: center;
+  }
+
+  .about-hero-media {
+    min-height: 520px;
+  }
+
+  .about-photo-card {
+    position: relative;
+    top: auto;
+    left: auto;
+    margin: 0 auto 20px;
+    transform: rotate(-3deg);
+  }
+
+  .spin-sticker-card {
+    position: relative;
+    right: auto;
+    bottom: auto;
+    margin: 0 auto;
+    transform: rotate(4deg);
+  }
+
+  .sparkle-one {
+    top: 0;
+    right: 20px;
+  }
+
+  .sparkle-two {
+    left: 20px;
+    bottom: 30px;
+  }
+
+  .about-card,
+  .currently-card {
+    transform: none !important;
+  }
+
+  .about-card h2 {
+    font-size: 26px;
+  }
+
+  .about-card p,
+  .currently-card p,
+  .about-fun p,
+  .about-cta p {
+    font-size: 17px;
+  }
+
+  .about-fun {
+    padding: 26px;
+  }
+}
