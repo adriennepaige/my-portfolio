@@ -1,122 +1,68 @@
 .projects-page {
-  width: min(1100px, calc(100% - 48px));
+  width: min(1500px, calc(100% - 48px));
   margin: 0 auto;
-  padding-top: 150px;
+  padding-top: 80px;
   padding-bottom: 80px;
 }
 
-.projects-hero {
-  margin: 0 0 40px;
-  text-align: center;
-}
-
-.projects-eyebrow {
-  margin: 0 0 12px;
-  font-family: "The Seasons", serif;
-  font-size: 13px;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: #8a8a8a;
-}
-
-.projects-hero h1 {
-  margin: 0;
-  font-family: "The Seasons", serif;
-  font-size: 56px;
-  font-weight: 500;
-  line-height: 1;
-  color: #282828;
-}
-
-.projects-intro {
-    font-family: "Shree Devanagari 714", sans-serif;
-    font-size: 14px;
-    font-weight: 600;
-    color: #282828;
-}
-
 .masonry-grid {
-  column-count: 2;
+  column-count: 3;
   column-gap: 16px;
 }
 
 .masonry-card {
   position: relative;
   display: block;
-  margin-bottom: 16px;
+  margin-bottom: 15px;
   break-inside: avoid;
-  overflow: hidden;
-  background: #000;
-  text-decoration: none;
-  cursor: pointer;
+  cursor: pointer; 
+  transition: transform 0.35s ease, opacity 0.35s ease;
 }
 
 .masonry-card img {
   width: 100%;
   display: block;
   height: auto;
-  transition: transform 0.4s ease;
-  border-radius: 2px;
-}
-
-.masonry-overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(214, 187, 255, 0.955);
-
-  opacity: 0;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 20px;
-
-  transition: opacity 0.3s ease;
+  object-fit: cover;
 }
 
 .masonry-text {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 6px;
-
-  transform: translateY(10px);
-  transition: transform 0.35s ease;
+  align-items: left;
+  text-transform: lowercase;
+  padding-top: 5px;
 }
 
 .project-title {
-  font-family: "The Seasons", serif;
-  font-size: 24px;
-  font-weight: 600;
+  font-family: "Shree Devanagari 714", sans-serif;
+  font-size: 14px;
+  color: #888;
 }
 
 .project-date {
   font-family: "Shree Devanagari 714", sans-serif;
-  font-size: 18px;
+  font-size: 12px;
   letter-spacing: 0.06em;
+  color: #888;
 }
 
-.masonry-card:hover img {
-  transform: scale(1.04);
-}
-
-.masonry-card:hover .masonry-overlay {
-  opacity: 1;
-}
-
-.masonry-card:hover .masonry-text {
-  transform: translateY(0);
+.masonry-card:hover {
+  transform: translateY(-4px);
+  opacity: 0.95;
 }
 
 @media (max-width: 900px) {
-  .projects-page {
-    width: min(1100px, calc(100% - 40px));
-    padding-top: 130px;
-  }
-
   .projects-hero h1 {
     font-size: 46px;
+  }
+
+  .masonry-grid {
+  column-count: 2;
+  }
+
+  .masonry-card {
+    margin-bottom: 20px;
   }
 
   .masonry-text {
@@ -126,13 +72,17 @@
 
 @media (max-width: 700px) {
   .projects-page {
-    width: min(1100px, calc(100% - 32px));
-    padding-top: 120px;
-    padding-bottom: 60px;
+    width: min(1500px, calc(100% - 32px));
+    padding-top: 80px;
+    padding-bottom: 20px;
   }
 
   .masonry-grid {
     column-count: 1;
+  }
+
+  .masonry-card {
+    margin-bottom: 25px;
   }
 
   .projects-hero {

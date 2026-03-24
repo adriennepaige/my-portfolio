@@ -149,7 +149,7 @@ body.about-page {
 .spin-sticker-card {
   position: absolute;
   right: 32px;
-  bottom: 42px;
+  bottom: 60px;
 
   width: 240px;
   height: 50px;
@@ -162,7 +162,6 @@ body.about-page {
   border-radius: 60px;
 
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
-  border: 1px solid rgba(0, 0, 0, 0.05);
 
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -334,11 +333,10 @@ body.about-page {
   width: 68px;
   height: 68px;
   border-radius: 50%;
-  background: radial-gradient(circle at center, #d6c2ff 8%, #2b2142 15%, #252525 58%, #000 100%);
+  background: url("vinyl.png") center / cover no-repeat;
   position: relative;
   flex-shrink: 0;
   animation: spinVinyl 6s linear infinite;
-  box-shadow: 0 8px 20px rgba(70, 50, 110, 0.18);
 }
 
 .vinyl::after {

@@ -7,25 +7,28 @@ html {
 }
 
 body {
-  margin: 0;
   background: #f7f7f7;
   color: #282828;
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.5;
 }
 
-img {
+img { 
   max-width: 100%;
+  max-height: 100%;
   display: block;
+
+  border-radius: 10px;
 }
 
 a {
   text-decoration: none;
-  color: inherit;
-  transition: color .2s ease, opacity .2s ease;
 }
 
 /* header */
 .site-header {
-  position: fixed;
+  position: fixed; 
   top: 0;
   left: 0;
   width: 100%;
@@ -67,6 +70,9 @@ a {
   max-height: 35px;
   width: auto;
   display: block;
+
+  position: relative;
+  left: -20px;
 }
 
 /* menu stuff */
@@ -159,6 +165,8 @@ a {
 .mobile-menu.open {
   max-height: 400px;
   opacity: 1;
+
+  position: fixed;
 }
 
 /* stars */
@@ -201,7 +209,7 @@ a {
 main {
   width: min(1200px, calc(100% - 64px));
   margin: 0 auto;
-  padding-top: 160px;
+  padding-top: 120px;
 }
 
 .hero {
@@ -221,47 +229,40 @@ main {
 }
 
 .hero h1 {
-  margin: 0 0 30px;
+  margin: 0 0 40px;
   font-family: "The Seasons", serif;
   font-size: 84px;
-  line-height: 0.95;
+  line-height: 0.75;
 }
 
 .hero .intro {
-  margin: 0 0 20px;
   font-family: "Shree Devanagari 714",sans-serif;
-  font-size: 34px;
-  line-height: 1.2;
+  font-size: 20px;
+  line-height: 1.1;
   color: #7a7a7a;
-}
-
-.hero .tools {
-  margin: 0;
-  font-family: "Shree Devanagari 714", sans-s serif;
-  font-size: 22px;
-  color: #9a9a9a;
 }
 
 .featured-work {
   padding:100px 0 120px;
+  text-transform: lowercase;
 }
 
 .section-heading {
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 
 .section-heading h2 {
   margin: 0;
   font-family: "The Seasons", serif;
-  font-size: 32px;
-  font-weight: 600;
+  font-size: 28px;
+  font-weight: 100;
   color: #282828;
 }
 
 .work-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 48px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
 }
 
 .work-card {
@@ -270,9 +271,9 @@ main {
 
 .work-card img {
   width: 100%;
-  aspect-ratio: 1/1;
+  max-height: 80%;
   object-fit: cover;
-   transition: transform 0.35s ease, opacity 0.35s ease;
+  transition: transform 0.35s ease, opacity 0.35s ease;
 }
 
 .work-card:hover img {
@@ -285,17 +286,17 @@ main {
 }
 
 .work-info h3 {
-  margin: 0 0 6px;
-  font-family: "The Seasons", serif;
-  font-size: 24px;
-  font-weight: 600;
+  margin: 0;
+  font-family: "Shree Devanagari 714", sans-serif;
+  font-size: 20px;
+  font-weight: 100;
   color: #282828;
 }
 
 .work-info p {
   margin: 0;
   font-family: "Shree Devanagari 714", sans-serif;
-  font-size: 18px;
+  font-size: 14px;
   color: #808080;
   text-align: left;
 }
@@ -485,7 +486,7 @@ main {
   }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 750px) {
   main {
     width: min(1200px, calc(100% - 32px));
     padding-top: 120px;
@@ -506,6 +507,9 @@ main {
 
   .logo img {
     max-height: 30px;
+
+    position: relative;
+    left: -10px;
   }
 
   .mobile-menu {
@@ -542,6 +546,7 @@ main {
 
   .featured-work {
     padding: 56px 0 72px;
+    margin: 20px;
   }
 
   .work-grid {
@@ -555,7 +560,7 @@ main {
 }
 }
 
-@media (min-width: 701px) {
+@media (min-width: 751px) {
   .mobile-menu {
     display: none !important;
   }

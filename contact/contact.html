@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | adriennepaigedesign</title>
+
+  <link rel="icon" type="image/png" href="../favicon.png">
+  <link rel="stylesheet" href="../main.css">
+  <link rel="stylesheet" href="contact.css">
+</head>
+
+<body>
+  <div id="top"></div>
+
+  <header class="site-header">
+    <div class="logo-wrap">
+      <a href="../index.html" class="logo">
+        <img src="../my-logo.png" alt="Adrienne Paige Design">
+      </a>
+    </div>
+
+    <nav class="site-nav">
+      <a href="../projects/page1.html">projects</a>
+      <a href="../websites/page2.html">websites</a>
+      <a href="../about/about.html">about</a>
+      <a href="contact.html">contact</a>
+    </nav>
+
+    <button class="menu-toggle" aria-label="Open menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </header>
+
+  <div class="mobile-menu">
+    <a href="../projects/page1.html">projects</a>
+    <a href="../websites/page2.html">websites</a>
+    <a href="../about/about.html">about</a>
+    <a href="contact.html">contact</a>
+  </div>
+
+  <main class="contact-page">
+    <section class="contact-hero">
+      <div class="contact-text">
+        <h1>Let’s work together.</h1>
+        <p class="contact-intro">
+          whether it's freelance work, collaborations, or general inquiries, feel free to reach out!
+        </p>
+      </div>
+    </section>
+
+    <section class="contact-grid">
+      <div class="contact-block">
+        <h2>Email</h2>
+        <p>
+          <a href="mailto:adriennepaigedesign@icloud.com">adriennepaigedesign@icloud.com</a>
+        </p>
+      </div>
+
+      <div class="contact-block">
+        <h2>Instagram</h2>
+        <p>
+          <a href="https://instagram.com/adriennepaigedesign" target="_blank" rel="noopener noreferrer">
+            @adriennepaigedesign
+          </a>
+        </p>
+      </div>
+
+      <div class="contact-block">
+        <h2>linkedin</h2>
+        <p>
+          <a href="https://www.linkedin.com/in/adriennebadgettcampo/" target="_blank" rel="noopener noreferrer">
+            Adrienne Badgett-Campo
+          </a>
+        </p>
+      </div>
+
+      <div class="contact-block">
+        <h2>Response Time</h2>
+        <p>
+          I usually respond within 2–3 business days.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <p class="footer-name">Adrienne Paige Design</p>
+        <p class="footer-credit">✦ hand coded by Adrienne Badgett-Campo ✦</p>
+      </div>
+
+      <div class="footer-links">
+        <h4>Explore</h4>
+        <a href="../projects/page1.html">Projects</a>
+        <a href="../websites/page2.html">Websites</a>
+        <a href="../about/about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+
+      <div class="footer-social">
+        <h4>Connect</h4>
+        <a href="https://instagram.com/adriennepaigedesign" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a href="mailto:adriennepaigedesign@gmail.com">Email</a>
+      </div>
+
+      <div class="footer-top">
+        <a href="#top">Back to top ↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const menuButton = document.querySelector(".menu-toggle");
+    const mobileMenu = document.querySelector(".mobile-menu");
+
+    if (menuButton && mobileMenu) {
+      menuButton.addEventListener("click", () => {
+        menuButton.classList.toggle("open");
+        mobileMenu.classList.toggle("open");
+      });
+    }
+  </script>
+</body>
+</html>
